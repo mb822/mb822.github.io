@@ -294,8 +294,45 @@ input.dark-mode-toggle:checked:after {
 
 
 
-<body scroll="no"  id = "body" style="  overflow: hidden; margin:0; height: 100%;  background: linear-gradient( 90deg , #2b3fd0 0%, #38ca44 100%);;" >
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body scroll="no"  id = "body" style="  overflow: hidden; margin:0; height: 100%;  background: linear-gradient( 90deg , #2b3fd0 0%, #38ca44 100%);" >
+
+<!-- <div class="into-animation" style="position:absolute; width: 100%; height:100%;"> -->
+  <!--
+      <div class='intro-ani' style="position:absolute; width: 100%; height:20%; background-color: red; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 20%; background-color: blue; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 40%; background-color: white; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 60%; background-color: green; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 80%; background-color: yellow; z-index: 1;"></div>
+    -->
+      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; background-color: #a6adb7; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 20%; background-color: #898f98; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 40%; background-color: #71767d; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 60%; background-color: #51555a; z-index: 1;"></div>
+      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 80%; background-color: #303235; z-index: 1;"></div>
+<!-- </div> --> 
+
+
+<!-- <div id="notbody" style="display: contents; filter:blur(20px);"> -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar" style="">
   <div class="container-fluid">
@@ -369,7 +406,7 @@ input.dark-mode-toggle:checked:after {
   </div>
 
 
-<!-- carousel -->
+
 
 
 <div class="container mt-4">
@@ -382,7 +419,7 @@ input.dark-mode-toggle:checked:after {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://user-images.githubusercontent.com/70653539/127753210-c196b43a-27a2-42c6-8e7b-0aef3fe08c30.png" class="d-block w-100" alt="...">
-      <div style="bottom: 9rem;" class="carousel-caption d-md-block"> <!-- d-none-->
+      <div style="bottom: 9rem;" class="carousel-caption d-md-block"> 
                 <a  style=" color: white;" href="https://web.njit.edu/~mb822/aguaclaranjit/home"><h5 class="pulsate" style="font-size: 4.25rem">AguaClara NJIT</h5></a>
         <p>Monitor AguaClara sensor lead levels remotely.</p>
       </div>
@@ -459,10 +496,26 @@ input.dark-mode-toggle:checked:after {
 
 
 
-
-
+<!-- end blur div 
+ </div> -->
 
 </body>
+
+<script type="text/javascript">
+
+    setTimeout(function(){
+      var animatedBlocks = document.getElementsByClassName("intro-ani");
+      for(var x = 0; x < 5; x++){
+              //console.log(animatedBlocks[x]);
+              animatedBlocks[x].style.borderRadius = "0px 50px 0px 0px";
+              animatedBlocks[x].style.webkitTransform = "translate(-100%, 0%)";
+              animatedBlocks[x].style.webkitTransition = "-webkit-transform 0.5s " + (x*0.2).toString() + "s";
+      }
+    },500);
+
+</script>
+
+
 
 <script type="text/javascript">
     var snapcontainer = document.getElementsByClassName("snapcontainer")[0];
