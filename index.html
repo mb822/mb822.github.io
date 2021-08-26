@@ -324,11 +324,17 @@ input.dark-mode-toggle:checked:after {
       <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 60%; background-color: green; z-index: 1;"></div>
       <div class='intro-ani' style="position:absolute; width: 100%; height:20%; top: 80%; background-color: yellow; z-index: 1;"></div>
     -->
-      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; background-color: #a6adb7; z-index: 1;"></div>
-      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 20%; background-color: #898f98; z-index: 1;"></div>
-      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 40%; background-color: #71767d; z-index: 1;"></div>
-      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 60%; background-color: #51555a; z-index: 1;"></div>
-      <div class='intro-ani' style="position:absolute; width: 150%; height:20%; top: 80%; background-color: #303235; z-index: 1;"></div>
+                  <!-- #a6adb7 -->
+
+
+
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; background-color: #36C04D ; z-index: 3;"></div> 
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 14.29%; background-color: #35B05D; z-index: 3;"></div> <!-- #898f98-->   
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 28.57%; background-color: #339F6F; z-index: 3;"></div> <!-- #71767d-->
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 42.86%; background-color: #328687; z-index: 3;"></div> <!-- #51555a-->
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 57.14%; background-color: #2F739C; z-index: 3;"></div> <!-- #303235-->
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 71.43%; background-color: #2E60AF; z-index: 3;"></div> <!-- rgb(28 29 31) -->
+      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 85.71%; background-color: #2B45C9; z-index: 3;"></div> <!-- rgb(7 8 8)-->
 <!-- </div> --> 
 
 
@@ -409,15 +415,15 @@ input.dark-mode-toggle:checked:after {
 
 
 
-<div class="container mt-4">
+<div class="container mt-4" style="border-radius: 50px;">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner" style="border-radius: 60px !important;">
-    <div class="carousel-item active">
+  <div class="carousel-inner" style="    -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; -khtml-border-radius: 50px;">
+    <div class="carousel-item active" style="border-radius: 50px;">
       <img src="https://user-images.githubusercontent.com/70653539/127753210-c196b43a-27a2-42c6-8e7b-0aef3fe08c30.png" class="d-block w-100" alt="...">
       <div style="bottom: 9rem;" class="carousel-caption d-md-block"> 
                 <a  style=" color: white;" href="https://web.njit.edu/~mb822/aguaclaranjit/home"><h5 class="pulsate" style="font-size: 4.25rem">AguaClara NJIT</h5></a>
@@ -505,53 +511,95 @@ input.dark-mode-toggle:checked:after {
 
     setTimeout(function(){
       var animatedBlocks = document.getElementsByClassName("intro-ani");
-      for(var x = 0; x < 5; x++){
+      for(var x = 0; x < 7 ; x++){
               //console.log(animatedBlocks[x]);
-              animatedBlocks[x].style.borderRadius = "0px 50px 0px 0px";
+              animatedBlocks[x].style.borderRadius = "0px 30px 0px 0px";
               animatedBlocks[x].style.webkitTransform = "translate(-100%, 0%)";
-              animatedBlocks[x].style.webkitTransition = "-webkit-transform 0.5s " + (x*0.2).toString() + "s";
+              animatedBlocks[x].style.webkitTransition = "-webkit-transform 1s " + (x*0.2).toString() + "s";
       }
     },500);
-
 </script>
 
 
 
+
+
+
+
+
+
 <script type="text/javascript">
-    var snapcontainer = document.getElementsByClassName("snapcontainer")[0];
-      /*.style.scrollSnapType = "none";*/
-    var carddeck = document.getElementsByClassName("card-deck row")[0];
 
-    $(function(){
-    setInterval(oneSecondFunction, 1000);
-    });
+        var snapcontainer = document.getElementsByClassName("snapcontainer")[0];
+        var carddeck = document.getElementsByClassName("card-deck row")[0];
 
-    function oneSecondFunction() {
-        var x = screen.height;
-        var imgs = document.getElementsByTagName('img');
+        $(function(){
+              setInterval(oneSecondFunction, 1000);
+        });
+
+        function oneSecondFunction() {
+              var x = screen.height;
+              var imgs = document.getElementsByTagName('img');
         
-        for(var i = 0; i < imgs.length; i++) {
-            /*imgs[i].style.height = (screen.height/screen.width * screen.height/1.25).toString() + "px";*/
-            imgs[i].style.height = (x/2.0).toString() + "px";
-    
+              for(var i = 0; i < imgs.length; i++) {
+                    imgs[i].style.height = (x/2.0).toString() + "px";
+              }
         }
-    }
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <script type="text/javascript">
 
+      var deviceBrowserType = 0;
+      $(document).ready(function(){
+            var ua = navigator.userAgent;
+
+            if(/iPhone|iPad|iPod/i.test(ua)){
+                  deviceBrowserType = 2;//safari mobile; OK  
+            }
+
+            else if(/Android|webOS|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
+                  //alert("mobile - not chrome");
+                  deviceBrowserType = 0;
+            }
+            else if(/Chrome/i.test(ua)){
+                  //alert("chrome desktop");
+                  deviceBrowserType = 1;
+            }
+            else{
+                  //alert("chrome mobile/ desktop none-chrome");
+                  deviceBrowserType = 0;
+            }
+});
+
+
 
 
 
     $(function(){
-    setInterval(oneSecondFunction, 1);
+        setInterval(oneSecondFunction, 1);
     });
+
 
     var open = false;
     var degree = 90;
-  
     var navbutton = document.getElementById('navbutton');
     var dropdownicon = document.getElementById('dropdownicon');
     var darkModeToggleLi = document.getElementsByClassName('dark-mode-toggle')[0].parentElement;
@@ -561,32 +609,26 @@ input.dark-mode-toggle:checked:after {
 
 
 
-    console.log(darkModeToggleLi);
+
+
+
+
+
 
     navbutton.addEventListener("click", function(){
-        degree = degree + 180;
+          degree = degree + 180;
 
-        //const urlParams = new URLSearchParams(window.location.search);
-        //console.log("dark: ");
-        //console.log(urlParams.has('dark'));
+          if(open){
+                dropdownicon.style.removeProperty("-webkit-box-reflect")
+                dropdownicon.style.webkitTransform = "rotate(" + degree.toString() + "deg)";
+                dropdownicon.style.webkitTransition = "-webkit-transform 0.5s";
 
-        if(open){
-              //darkModeToggle.style.visibility = "hidden";
-              //darkModeToggleLi.style.visibility = "hidden";
-              //darkModeToggleLi.hidden = true;
-              dropdownicon.style.removeProperty("-webkit-box-reflect")
-              dropdownicon.style.webkitTransform = "rotate(" + degree.toString() + "deg)";
-              dropdownicon.style.webkitTransition = "-webkit-transform 0.5s";
+                navbutton.style.webkitTransform = "translate(-10px, 10px)";
+                navbutton.style.webkitTransition = "-webkit-transform 0.5s";
 
-
-              navbutton.style.webkitTransform = "translate(-10px, 10px)";
-              navbutton.style.webkitTransition = "-webkit-transform 0.5s";
-
-
-              open = false;
-        }
-
-        else{
+                open = false;
+          }
+          else{
               darkModeToggleLi.hidden = false;
               navbutton.style.webkitTransform = "translate(-10px, 0px)";
               navbutton.style.webkitTransition = "-webkit-transform 0.5s";
@@ -594,12 +636,17 @@ input.dark-mode-toggle:checked:after {
               dropdownicon.style.webkitTransform = "rotate(" + degree.toString() + "deg)";
               dropdownicon.style.webkitTransition = "-webkit-transform 0.5s";
               dropdownicon.style.webkitBoxReflect = "right -1em";
-              //darkModeToggleLi.style.visibility = "visible";
-              //darkModeToggle.style.visibility = "visible";
 
               open = true;
-        }       
+          }       
     })
+
+
+
+
+
+
+
 
 
     //darkmode
@@ -609,24 +656,25 @@ input.dark-mode-toggle:checked:after {
     var navbar = document.getElementById('navbar');
     var menuToggle = document.getElementById('dropdownicon');
     var linkedButtons = document.getElementsByClassName('nav-item');
-    console.log(linkedButtons[0]);
-  
     var darkmode = true;
 
-
-
     const urlParams = new URLSearchParams(window.location.search);
+
+
+
+
     if(urlParams.has('dark')){
-              logo.style.color = 'white';
-              body.style.background = 'black';
-              navbar.classList.remove("bg-light");
-              navbar.classList.add("bg-dark");
-              menuToggle.style.filter = 'brightness(1.6)';
-              darkModeToggle.checked = true;
-              for(var i = 0; i < linkedButtons.length-1; i++){
-                  linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#00ff50');
-              }
-              darkmode = false;
+          logo.style.color = 'white';
+          body.style.background = 'black';
+          navbar.classList.remove("bg-light");
+          navbar.classList.add("bg-dark");
+          menuToggle.style.filter = 'brightness(1.6)';
+          darkModeToggle.checked = true;
+          
+          for(var i = 0; i < linkedButtons.length-1; i++){
+                linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#00ff50');
+          }
+          darkmode = false;
     }
 
 
@@ -637,38 +685,101 @@ input.dark-mode-toggle:checked:after {
 
 
     darkModeToggle.addEventListener("click", function(){
+        if(deviceBrowserType == 1 || deviceBrowserType == 2){ ///is req browser
+          if(darkmode){
+                var animatedBlocks = document.getElementsByClassName("intro-ani");
+                for(var x = 6; x >= 0 ; x--){
+                      animatedBlocks[x].style.borderRadius = "0px 30px 0px 30px";
+                      animatedBlocks[x].style.width = "500%";
+                      animatedBlocks[x].style.webkitTransform = "translate(20%, 0%)"; //21
+                      animatedBlocks[x].style.webkitTransition = "all 2.6s cubic-bezier(0.7, 0.15, 0.3, 0.85) " + ((6-x)*0.09).toString() + "s"; //ease-in
+                      if(deviceBrowserType == 1){
+                            animatedBlocks[x].style.filter = "saturate(0.1) brightness(0.2)";//brightness(0.2)
+                      }
+                }
 
-        if(darkmode){
+                setTimeout(function(){
+                      for(var i = 0; i < linkedButtons.length-1; i++){
+                            linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#00ff50');
+                      }
+                      logo.style.color = 'white';
+                      body.style.background = 'linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%)';
+                      navbar.classList.remove("bg-light");
+                      navbar.classList.add("bg-dark");
+                      menuToggle.style.filter = 'brightness(1.6)';
+                },1600);
+          }
 
-              for(var i = 0; i < linkedButtons.length-1; i++){
-                  linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#00ff50');
-              }
-              //logo.classList.remove('bounce');
-              logo.style.color = 'white';
-              body.style.background = 'black';
-              navbar.classList.remove("bg-light");
-              navbar.classList.add("bg-dark");
-              //navbar.style.backgroundColor = '#151515 !important';
-              menuToggle.style.filter = 'brightness(1.6)';
-        }
-        else{
+          else {
+                var animatedBlocks = document.getElementsByClassName("intro-ani");
 
-              for(var i = 0; i < linkedButtons.length-1; i++){
-                  linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#0d6efd');
-              }
+                for(var x = 6; x >= 0 ; x--){
+                      animatedBlocks[x].style.borderRadius = "0px 30px 0px 30px";
+                      animatedBlocks[x].style.width = "500%";
+                      animatedBlocks[x].style.webkitTransform = "translate(-100%, 0%)"; ////105
+                      animatedBlocks[x].style.webkitTransition = "all 2.6s cubic-bezier(0.7, 0.15, 0.3, 0.85) " + ((x)*0.09).toString() + "s";
+                      animatedBlocks[x].style.filter = "saturate(1) brightness(1.0)";//brightness(1.0)
+                }
 
-              logo.style.color = 'black';
-              body.style.background = 'linear-gradient( 90deg , #2b3fd0 0%, #38ca44 100%)';
+                setTimeout(function(){
+                      for(var i = 0; i < linkedButtons.length-1; i++){
+                            linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#0d6efd');
+                      }
+                      logo.style.color = 'black';
+                      body.style.background = 'linear-gradient( 90deg , #2b3fd0 0%, #38ca44 100%)';
+                      navbar.classList.add("bg-light");
+                      navbar.classList.remove("bg-dark");
+                      menuToggle.style.filter = 'brightness(0.2)'; 
+                },1700);
+          }
+    }//////////is req browser
 
-              navbar.classList.add("bg-light");
-              navbar.classList.remove("bg-dark");
-              //console.log(navbar.style.backgroundColor);
-              //navbar.style.backgroundColor = '#ffffff !important';
-              //console.log(navbar.style.backgroundColor);
-              menuToggle.style.filter = 'brightness(0.2)';
-        }
-        darkmode = !darkmode;
-  });
+
+
+    else{
+      if(darkmode){
+                      for(var i = 0; i < linkedButtons.length-1; i++){
+                            linkedButtons[i].style.webkitTransition = "all 0.5s cubic-bezier(0.7, 0.15, 0.3, 0.85) 0s";
+                            linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#00ff50');
+                      }
+                      logo.style.webkitTransition = "all 0.5s cubic-bezier(0.7, 0.15, 0.3, 0.85) 0s";
+                      body.style.webkitTransition = "all 0.5s cubic-bezier(0.7, 0.15, 0.3, 0.85) 0s";
+                      navbar.style.webkitTransition = "all 0.5s cubic-bezier(0.7, 0.15, 0.3, 0.85) 0s";
+                      menuToggle.style.webkitTransition = "all 0.5s cubic-bezier(0.7, 0.15, 0.3, 0.85) 0s";
+
+                      logo.style.color = 'white';
+                      body.style.background = 'linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%)';
+                      navbar.classList.remove("bg-light");
+                      navbar.classList.add("bg-dark");
+                      menuToggle.style.filter = 'brightness(1.6)';
+      }
+      else{
+                      for(var i = 0; i < linkedButtons.length-1; i++){
+                            linkedButtons[i].childNodes[1].childNodes[1].setAttribute('fill','#0d6efd');
+                      }
+                      logo.style.color = 'black';
+                      body.style.background = 'linear-gradient( 90deg , #2b3fd0 0%, #38ca44 100%)';
+                      navbar.classList.add("bg-light");
+                      navbar.classList.remove("bg-dark");
+                      menuToggle.style.filter = 'brightness(0.2)';
+
+      }
+    }
+
+
+
+
+
+
+
+
+          darkmode = !darkmode;
+      });
+
+
+
+
+
 </script>
 
 </html>
