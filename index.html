@@ -524,7 +524,21 @@ input.dark-mode-toggle:checked:after {
               animatedBlocks[x].style.webkitTransform = "translate(-100%, 0%)";
               animatedBlocks[x].style.webkitTransition = "-webkit-transform 1s " + (x*0.2).toString() + "s";
       }
-    },500);
+    },500)
+
+
+
+
+
+
+    setTimeout(function(){
+      for(var x = 0; x < 7 ; x++){
+              animatedBlocks[x].style.filter = "saturate(1.0)";
+      }
+    },2700);
+
+
+
 </script>
 
 
