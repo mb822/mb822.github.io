@@ -508,8 +508,13 @@ input.dark-mode-toggle:checked:after {
 </body>
 
 <script type="text/javascript">
-
+  var darkmode = true;
   var animatedBlocks = document.getElementsByClassName("intro-ani");
+  var animatedBlocks = document.getElementsByClassName("intro-ani");
+  const urlParams = new URLSearchParams(window.location.search);
+
+
+
   setTimeout(function(){
       for(var x = 0; x < 7 ; x++){
               //console.log(animatedBlocks[x]);
@@ -536,6 +541,31 @@ input.dark-mode-toggle:checked:after {
               animatedBlocks[x].style.filter = "saturate(1.0)";
       }
     },2700);
+
+
+
+
+
+    setTimeout(function(){
+          if(urlParams.has('dark')){
+              darkmode = false;
+              for(var x = 0; x < 7 ; x++){
+                  animatedBlocks[x].style.webkitTransition = "none";
+                  animatedBlocks[x].style.webkitTransform = "translate(20%, 0%)";
+                  //animatedBlocks[x].style.webkitTransition = "-webkit-transform 1s " + (x*0.2).toString() + "s";
+              }
+              for(var x = 6; x >= 0 ; x--){
+                  animatedBlocks[x].style.borderRadius = "0px 30px 0px 30px";
+                  animatedBlocks[x].style.width = "500%";
+                  animatedBlocks[x].style.webkitTransform = "translate(20%, 0%)"; //21
+
+                  if(deviceBrowserType == 1){
+                      animatedBlocks[x].style.filter = "saturate(0.1) brightness(0.2)";//brightness(0.2)
+                  }
+              }
+          }
+    },2700);
+
 
 
 
@@ -677,9 +707,8 @@ input.dark-mode-toggle:checked:after {
     var navbar = document.getElementById('navbar');
     var menuToggle = document.getElementById('dropdownicon');
     var linkedButtons = document.getElementsByClassName('nav-item');
-    var darkmode = true;
 
-    const urlParams = new URLSearchParams(window.location.search);
+    //const urlParams = new URLSearchParams(window.location.search);
 
 
 
