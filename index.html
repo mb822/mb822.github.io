@@ -328,13 +328,13 @@ input.dark-mode-toggle:checked:after {
 
 
 
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; background-color: #36C04D ; z-index: 3;"></div> 
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 14.29%; background-color: #35B05D; z-index: 3;"></div> <!-- #898f98-->   
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 28.57%; background-color: #339F6F; z-index: 3;"></div> <!-- #71767d-->
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 42.86%; background-color: #328687; z-index: 3;"></div> <!-- #51555a-->
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 57.14%; background-color: #2F739C; z-index: 3;"></div> <!-- #303235-->
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 71.43%; background-color: #2E60AF; z-index: 3;"></div> <!-- rgb(28 29 31) -->
-      <div class='intro-ani' style="position:absolute; width: 150%; height:14.29%; top: 85.71%; background-color: #2B45C9; z-index: 3;"></div> <!-- rgb(7 8 8)-->
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%;              background-color: #36C04D; z-index: 3; filter: saturate(0.0);"></div> 
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 14.29%; background-color: #35B05D; z-index: 3; filter: saturate(0.0);"></div> <!-- #898f98-->   
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 28.57%; background-color: #339F6F; z-index: 3; filter: saturate(0.0);"></div> <!-- #71767d-->
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 42.86%; background-color: #328687; z-index: 3; filter: saturate(0.0);"></div> <!-- #51555a-->
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 57.14%; background-color: #2F739C; z-index: 3; filter: saturate(0.0);"></div> <!-- #303235-->
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 71.43%; background-color: #2E60AF; z-index: 3; filter: saturate(0.0);"></div> <!-- rgb(28 29 31) -->
+      <div class='intro-ani' style="position:absolute; width: 100%; height:14.29%; top: 85.71%; background-color: #2B45C9; z-index: 3; filter: saturate(0.0);"></div> <!-- rgb(7 8 8)-->
 <!-- </div> --> 
 
 
@@ -509,11 +509,18 @@ input.dark-mode-toggle:checked:after {
 
 <script type="text/javascript">
 
-    setTimeout(function(){
-      var animatedBlocks = document.getElementsByClassName("intro-ani");
+  var animatedBlocks = document.getElementsByClassName("intro-ani");
+  setTimeout(function(){
       for(var x = 0; x < 7 ; x++){
               //console.log(animatedBlocks[x]);
               animatedBlocks[x].style.borderRadius = "0px 30px 0px 0px";
+              animatedBlocks[x].style.width = "500%";
+      }
+    },100);
+
+    setTimeout(function(){
+      for(var x = 0; x < 7 ; x++){
+              //console.log(animatedBlocks[x]);
               animatedBlocks[x].style.webkitTransform = "translate(-100%, 0%)";
               animatedBlocks[x].style.webkitTransition = "-webkit-transform 1s " + (x*0.2).toString() + "s";
       }
